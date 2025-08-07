@@ -32,6 +32,10 @@
         <con:request name="Request 1" id="309bcbf6-67ee-4443-8149-a96cfc32d422" mediaType="application/json">
           <con:settings/>
           <con:endpoint>https://api.github.com</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -66,6 +70,10 @@
         <con:request name="Request 1" id="4bb10568-174f-4694-b098-f76833aaef0a" mediaType="application/json">
           <con:settings/>
           <con:endpoint>https://api.github.com</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters>
             <con:entry key="keyId" value="keyId"/>
           </con:parameters>
@@ -105,6 +113,10 @@
         <con:request name="Request 1" id="bf0f8446-51f8-4392-b6e1-be34e1e8d04d" mediaType="application/json">
           <con:settings/>
           <con:endpoint>https://api.github.com</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters>
             <con:entry key="keyId" value="keyId"/>
           </con:parameters>
@@ -140,8 +152,26 @@
                 <codes>201</codes>
               </con:configuration>
             </con:assertion>
+            <con:assertion type="JsonPath Match" id="3e001e26-0e7a-4677-ab69-d51e484376e8" name="JSONPath Match">
+              <con:configuration>
+                <path>$.title</path>
+                <content>TestKey</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="19e9dbda-61fe-416a-abeb-77be499038fd" name="JSONPath Existence Match">
+              <con:configuration>
+                <path>$.id</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
             <con:credentials>
-              <con:selectedAuthProfile>GitHub Project REST</con:selectedAuthProfile>
+              <con:selectedAuthProfile>github</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -153,7 +183,7 @@
         <con:settings/>
         <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
-            <con:name>id</con:name>
+            <con:name>idToGET</con:name>
             <con:sourceType>Response</con:sourceType>
             <con:sourceStep>POST Request</con:sourceStep>
             <con:sourcePath>$.id</con:sourcePath>
@@ -165,7 +195,7 @@
             <con:upgraded>true</con:upgraded>
           </con:transfers>
           <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
-            <con:name>keyId</con:name>
+            <con:name>idToDELETE</con:name>
             <con:sourceType>Response</con:sourceType>
             <con:sourceStep>POST Request</con:sourceStep>
             <con:sourcePath>$.id</con:sourcePath>
@@ -193,13 +223,22 @@
                 <codes>200</codes>
               </con:configuration>
             </con:assertion>
+            <con:assertion type="JsonPath Match" id="e1c53fe6-6f62-40ec-b88a-691e6438909a" name="JSONPath Match">
+              <con:configuration>
+                <path>$.verified</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
             <con:credentials>
-              <con:selectedAuthProfile>GithubProjectREST</con:selectedAuthProfile>
+              <con:selectedAuthProfile>github</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
-              <con:entry key="keyId" value="125806340"/>
+              <con:entry key="keyId" value="125820405"/>
             </con:parameters>
             <con:parameterOrder>
               <con:entry>keyId</con:entry>
@@ -229,7 +268,7 @@
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
-              <con:entry key="keyId" value="125806340"/>
+              <con:entry key="keyId" value="125820405"/>
             </con:parameters>
             <con:parameterOrder>
               <con:entry>keyId</con:entry>
@@ -249,30 +288,6 @@
   <con:databaseConnectionContainer/>
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer>
-    <con:oAuth2Profile>
-      <con:name>GitHub Project REST</con:name>
-      <con:type>OAuth 2.0</con:type>
-      <con:accessToken>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</con:accessToken>
-      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
-      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
-      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
-      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
-      <con:jwtConfiguration/>
-      <con:responseType>id_token</con:responseType>
-    </con:oAuth2Profile>
-    <con:oAuth2Profile>
-      <con:name>GithubProjectREST</con:name>
-      <con:type>OAuth 2.0</con:type>
-      <con:accessToken>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</con:accessToken>
-      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
-      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
-      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
-      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
-      <con:jwtConfiguration/>
-      <con:responseType>id_token</con:responseType>
-    </con:oAuth2Profile>
     <con:oAuth2Profile>
       <con:name>github</con:name>
       <con:type>OAuth 2.0</con:type>
@@ -321,30 +336,6 @@
 // fos.close()</con:script>
   </con:eventHandlers>
   <con:authRepository>
-    <con:oAuth20AuthEntry>
-      <con:name>GitHub Project REST</con:name>
-      <con:type>OAuth 2.0</con:type>
-      <con:accessToken>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</con:accessToken>
-      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
-      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
-      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
-      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
-      <con:jwtConfiguration/>
-      <con:responseType>id_token</con:responseType>
-    </con:oAuth20AuthEntry>
-    <con:oAuth20AuthEntry>
-      <con:name>GithubProjectREST</con:name>
-      <con:type>OAuth 2.0</con:type>
-      <con:accessToken>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</con:accessToken>
-      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
-      <con:accessTokenStatus>ENTERED_MANUALLY</con:accessTokenStatus>
-      <con:accessTokenStartingStatus>ENTERED_MANUALLY</con:accessTokenStartingStatus>
-      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
-      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
-      <con:jwtConfiguration/>
-      <con:responseType>id_token</con:responseType>
-    </con:oAuth20AuthEntry>
     <con:oAuth20AuthEntry>
       <con:name>github</con:name>
       <con:type>OAuth 2.0</con:type>

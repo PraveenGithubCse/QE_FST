@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2c47274a-f614-4a9f-8365-ac0bbae7c3c4" created="3.61.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="CashierREST" projectVersion="" updated="3.61.0 2025-06-17T10:42:49Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="64d0a5ee-87f9-4899-8092-df2ef7d0500f" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8181" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="7b5fef39-2228-4baf-bab9-ce80da7c0825"/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8181</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Cashiers" path="/api/cashiers" id="932aded3-c681-4131-beee-e15ebc8d402a">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Cashiers" id="98226591-11e3-4a7f-afc2-553ec08a232e" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:cas="http://localhost/api/cashiers">cas:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="2ebf4f1e-99d1-43d4-ad29-ff3db3d245d8" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://localhost:8181</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="Cashiers 2" id="337cdfd5-f82e-425e-a611-e42a6526c15f" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="e7dfc603-9b7e-4c53-9cf7-1fecc05abe6c" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://localhost:8181</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Id" path="/api/cashiers/{id}" id="3a9d949c-a6f0-473c-a3f3-38ce883fd500">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Id" id="13d4e33d-4cde-44b9-9f2a-7d6adb32ccd6" method="PUT">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value>id</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>id</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/api/cashiers/1">ns:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/api/cashiers/1">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="1bd3f375-780e-47cd-9901-db29ce5705d4" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://localhost:8181</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="id" value="id"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+      <con:method name="Id 2" id="fcc86760-a1a9-4f88-ba82-f79fc42c45b8" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value>id</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>id</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://localhost/api/cashiers/1">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="fe81ed97-3a5d-44ea-9f09-4f0a38d0924d" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://localhost:8181</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="id" value="id"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+      <con:method name="Id 3" id="34e4bf5a-a1f0-45fe-bb15-fbcde9c1e783" method="DELETE">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value>id</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>id</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="d598fc3b-6032-4485-9027-883e9af796af" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://localhost:8181</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="id" value="id"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="0fee2d67-bb56-44d7-8e9d-f9e51571676e" name="http://localhost:8181 Test Suite">
+    <con:settings id="d59ccd79-b63f-4836-83c1-5df1ee152f46"/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="718fe7cf-9ded-4429-936d-4fc556925216" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="b637bb1c-7852-45cd-bf2e-b22767cc9634">
+        <con:settings/>
+        <con:config service="http://localhost:8181" resourcePath="/api/cashiers" methodName="Cashiers" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="2ebf4f1e-99d1-43d4-ad29-ff3db3d245d8" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8181</con:endpoint>
+            <con:request>{
+	"id":1,
+	"surname_name":"Praveen"
+}
+</con:request>
+            <con:originalUri>http://localhost/api/cashiers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="42721ac5-e861-46da-8bb7-af93bc557250" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request 2" id="15abf962-679e-45b9-badc-45f6e5af6cfb">
+        <con:settings/>
+        <con:config service="http://localhost:8181" resourcePath="/api/cashiers/{id}" methodName="Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 2" id="1bd3f375-780e-47cd-9901-db29ce5705d4" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8181</con:endpoint>
+            <con:request>{
+	"id": 1,
+	"surname_name":"bella"
+}
+</con:request>
+            <con:originalUri>http://localhost/api/cashiers/1</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="302eaf88-9ea8-4aac-8768-e7d8d7fe4456" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="1"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request 3" id="d40cd334-222a-47fb-82f4-d23816945d0f">
+        <con:settings/>
+        <con:config service="http://localhost:8181" resourcePath="/api/cashiers" methodName="Cashiers 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 3" id="e7dfc603-9b7e-4c53-9cf7-1fecc05abe6c" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8181</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/api/cashiers</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e2668fb8-cb4f-478a-ad5c-094c0ca636c4" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request 4" id="6bc78be9-4d30-41e9-be84-0588e03dfd45">
+        <con:settings/>
+        <con:config service="http://localhost:8181" resourcePath="/api/cashiers/{id}" methodName="Id 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 4" id="fe81ed97-3a5d-44ea-9f09-4f0a38d0924d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8181</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/api/cashiers/1</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="39a18724-37be-430c-9340-2928715242fc" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="1"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request 5" id="adf7db30-6246-4876-ad05-9c314944303e">
+        <con:settings/>
+        <con:config service="http://localhost:8181" resourcePath="/api/cashiers/{id}" methodName="Id 3" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 5" id="d598fc3b-6032-4485-9027-883e9af796af" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8181</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/api/cashiers/1</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="bdbbeab6-9b0a-4ab1-8f63-d0eb1ed6250c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="1"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

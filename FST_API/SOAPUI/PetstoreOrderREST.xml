@@ -32,6 +32,10 @@
         <con:request name="Request 1" id="3cb6bee8-7e36-4c81-8a6f-6742834421f9" mediaType="application/json">
           <con:settings/>
           <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -51,6 +55,10 @@
         <con:request name="Request 1" id="bcd63f11-956f-482a-95ac-e10c638898c0" mediaType="application/json">
           <con:settings/>
           <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -85,6 +93,10 @@
         <con:request name="Request 1" id="020b0531-3d92-4f73-bec5-6c4146f47b0e" mediaType="application/json">
           <con:settings/>
           <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters>
             <con:entry key="orderId" value="orderId"/>
           </con:parameters>
@@ -124,6 +136,10 @@
         <con:request name="Request 1" id="750dd637-72fb-49b0-a9c7-a81ac67b6e79" mediaType="application/json">
           <con:settings/>
           <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters>
             <con:entry key="orderId" value="orderId"/>
           </con:parameters>
